@@ -62,12 +62,10 @@
         margin: 0;
         padding: 0;
     }
+
 </style>
 
-<?php
-
-use Illuminate\Support\Facades\Session;
-?>
+<?php use Illuminate\Support\Facades\Session; ?>
 
 <body>
     <!-- ------------------------------------------  include  --------------------------------------------->
@@ -104,12 +102,10 @@ use Illuminate\Support\Facades\Session;
                                 <div class="form-group col-md-2">
                                     <select id="yearSelect2" class="form-control" name="Flagyear">
                                         <optgroup class="newFont">
-                                            <?php
-                                            for ($i = 0; $i < count($currentYear); $i++) {
-                                                $selected = ($currentYear[$i]->flag  == 1 ? 'selected' : '');
+                                            <?php for ($i = 0; $i < count($currentYear); $i++) {
+                                                $selected = $currentYear[$i]->flag == 1 ? 'selected' : '';
                                                 echo '<option  value="' . $currentYear[$i]->year_id . '"' . $selected . '>' . $currentYear[$i]->year . '</option>';
-                                            }
-                                            ?>
+                                            } ?>
                                         </optgroup>
                                     </select>
                                 </div>
@@ -148,7 +144,7 @@ use Illuminate\Support\Facades\Session;
                                             <button class="btn btn-inverse-success btns" data-toggle="modal" data-target="#modalAction{{ $i }}"><i class="mdi mdi-grease-pencil launch-modal"></i></button>
                                             <button class="btn btn-inverse-danger btns" data-toggle="modal" data-target="#modalDelete{{ $i }}"><i class="mdi mdi-delete"></i></button>
                                         </td>
-                                    </tr>
+                                    </tr> 
 
                                     <div class="modal fade" id="modalDelete{{ $i }}" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel1" aria-hidden="true">
                                         <div class="modal-dialog" role="document">
@@ -203,16 +199,31 @@ use Illuminate\Support\Facades\Session;
                                                                         <label class="newFont">แผนก</label>
                                                                         <input name="value_of_item" type="text" value="{{ $value->id_employee }}" hidden>
                                                                         <input type="text" class="form-control" name="name_department" placeholder="" value="{{ $value->name_department }}" required>
+                                                     
                                                                     </div>
                                                                     <div class="form-group col-md-6">
                                                                         <label class="newFont">ตำแหน่ง</label>
                                                                         <input name="value_of_item" type="text" value="{{ $value->id_employee }}" hidden>
                                                                         <input type="text" class="form-control" name="name_position" placeholder="" value="{{ $value->name_position }}" required>
+                                                                
                                                                     </div>
                                                                     <div class="form-group col-md-6">
                                                                         <label class="newFont">สถานะผู้ใช้งาน</label>
                                                                         <input name="value_of_item" type="text" value="{{ $value->id_employee }}" hidden>
                                                                         <input type="text" class="form-control" name="code_name" placeholder="" value="{{ $value->code_name }}" required>
+                                                                        <select class="form-control " name="status" id="status" style="width:auto;">
+                                                                            <?php 
+                                                                            for ($i=0; $i <=3; $i++) { 
+                                                                                $selected = ($i  === $value->status ? 'selected' : ''); 
+                                                                            }
+                                                                            ?>
+                                                                            <optgroup class="newFont" label="">
+
+                                                                                <option <?php $selected?> value="3">super_admin</option>
+                                                                                <option <?php $selected?> value="2">admin</option>
+                                                                                <option <?php $selected?> value="1">user</option>
+                                                                             </optgroup>
+                                                                        </select>
                                                                     </div>
                                                                     <div class="form-group col-md-6">
                                                                         <label class="newFont">password</label>

@@ -229,8 +229,6 @@ use Illuminate\Support\Facades\Session;
                                                                             <select name="employee[]" id="employee" class="selectpicker newFont" multiple data-live-search="true">
                                                                                 <optgroup class="newFont" label="ทีมดูแลเพจ">
                                                                                     <?php
-
-
                                                                                     $empArr = explode(',', $value->name_employee);
                                                                                     ?>
                                                                                     @foreach ($employee as $i => $value)
