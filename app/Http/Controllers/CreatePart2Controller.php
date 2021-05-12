@@ -17,7 +17,6 @@ class CreatePart2Controller extends Controller
             ->join('indicator', 'assign.indicator_id', '=', 'indicator.indicator_id')
             ->join('year', 'year.year_id', '=', 'indicator.year_id')
             ->where('flag', 1)
-            // ->join('indicator_year', 'indicator.indicator_id', '=', 'indicator_year.indicator_id')
             ->select('employee.*', 'assign.*', 'indicator.*')
             ->get();
 
@@ -26,13 +25,9 @@ class CreatePart2Controller extends Controller
             ->join('indicator', 'assign.indicator_id', '=', 'indicator.indicator_id')
             ->join('year', 'year.year_id', '=', 'indicator.year_id')
             ->where('flag', 1)
-            // ->join('indicator_month', 'indicator.indicator_id', '=', 'indicator_month.indicator_id')
             ->select('employee.*', 'assign.*', 'indicator.*')
             ->get();
 
-        //dd($shindicator_year);
-        //dd($showindicator_month);
-        // return view('createPart2',compact('shindicator_year','shindicator_month'));
 
         $getEmployee = DB::table('employee')
             ->select('employee.*')
@@ -64,14 +59,12 @@ class CreatePart2Controller extends Controller
             $max = DB::table('indicator')->max('indicator_id');
             for ($i = 1; $i <= 12; $i++) {
                 $data["result"] = null;
-                // $data["fullscore"] = $request->fullscore;
                 $data["score"] = null;
                 $data["percent"] = null;
                 $data["indicator_id"] = $max;
                 $data["year_id"] = $request->year;
                 $data["month"] = $i;
                 $data["status"] = 0;
-                // $data["id_employee"] = $request->input('employ');
                 DB::table('indicator_month')->insert($data);
             }
         } else if ($checktype == 0) {
@@ -80,11 +73,9 @@ class CreatePart2Controller extends Controller
             $data["indicator_id"] = $max;
             $data["year_id"] = $request->year;
             $data["result"] = null;
-            // $data["fullscore"] = $request->fullscore;
             $data["score"] = null;
             $data["percent"] = null;
             $data["status"] = 0;
-            // $data["id_employee"] = $request->input('employ');
 
             DB::table('indicator_year')->insert($data);
         }
