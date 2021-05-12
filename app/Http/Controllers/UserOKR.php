@@ -59,11 +59,12 @@ class UserOKR extends Controller
 
     public function userKRdetail(Request $request)
     {
+        $idUser = session()->get('user')['id_employee'];
         $Object = $request->Object;
         $mount = $request->mount;
         Session::put('object', $Object);
         Session::put('mount', $mount);
-        $idUser = session()->get('user')['id_employee'];
+
         $userKR = DB::table('object')
             ->leftJoin('kr', 'object.idobject', '=', 'kr.object_idobject')
             ->leftJoin('krdetail', 'kr.idKR', '=', 'krdetail.KR_idKR')
@@ -72,7 +73,7 @@ class UserOKR extends Controller
             ->where('krdetail.KR_object_idobject', '=', $Object)
             ->where('krdetail.mount', '=', $mount)
             ->get();
-        return view('userGroup1.kr', compact('userKR', 'mount', 'Object'));
+        return view('userGroup1.kr', compact('userKR', 'mount', 'Object', 'idUser'));
     }
     public function usermount()
     {
@@ -87,7 +88,7 @@ class UserOKR extends Controller
             ->where('krdetail.KR_object_idobject', '=', $Object)
             ->where('krdetail.mount', '=', $mount)
             ->get();
-        return view('userGroup1.kr', compact('userKR', 'mount', 'Object'));
+        return view('userGroup1.kr', compact('userKR', 'mount', 'Object', 'idUser'));
     }
     public function search()
     {
