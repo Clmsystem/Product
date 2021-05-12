@@ -11,8 +11,8 @@ class ObjectGroup1 extends Controller
     public function index()
     {
         $allyear = DB::table('year')->get();
-        $currentyear = DB::table('year')->max('year');
-        $currentyearid = DB::table('year')->max('year_id');
+        $currentyear = DB::table('year')->where('flag', '=', 1)->value('year');
+        $currentyearid = DB::table('year')->where('flag', '=', 1)->value('year_id');
         $flag = DB::table('year')->where('year_id', $currentyearid)->value('flag');
         $ob = DB::table('year')
             ->join('object', 'year.year_id', '=', 'object.year_year_id')
