@@ -35,6 +35,7 @@ use App\Http\Controllers\ConfirmPart2Controller;
 use App\Http\Controllers\ConfirmPart2YearController;
 use App\Http\Controllers\GraphPart2Controller;
 use App\Http\Controllers\GraphPart2YearController;
+
 /************************************************  END GROUP 3**********************************************************/
 
 
@@ -53,7 +54,7 @@ try {
     Route::post('/index', function () {
         return view('index');
     })->name('/');
-    
+
 
 
     Route::get('/', function () {
@@ -65,7 +66,7 @@ try {
     });
     Route::get('/logout', function () {
         session()->forget('user');
-        return view('login');
+        return redirect('/');
     });
     Route::post('/Valid', [LoginController::class, 'index'], function ($argv) {
     })->name('test');
@@ -146,7 +147,7 @@ try {
     Route::get('/graphPart2Year', [GraphPart2YearController::class, 'index']);
     Route::get('/graphPart2', [GraphPart2Controller::class, 'index']);
 
-     /********************************************* END GROUP 3 ***********************************************/
+    /********************************************* END GROUP 3 ***********************************************/
     /********************************************* END GROUP 3 ***********************************************/
     /********************************************* END GROUP 3 ***********************************************/
 
@@ -186,9 +187,6 @@ try {
     /********************************************* END GROUP 1 ********************************/
     /********************************************* END GROUP 1 ********************************/
     /********************************************* END GROUP 1 ********************************/
-
-    
-
 }
 //catch exception
 catch (Exception $e) {
