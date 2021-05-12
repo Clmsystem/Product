@@ -71,7 +71,7 @@
             <!-- partial -->
             <div class="main-panel">
                 <div class="content-wrapper">
-                    <button class="float-right btn btn-gradient-info btn-md m-3 mdi mdi-arrow-left newFont" onclick="goBack()" >ย้อนกลับ</button>
+                    <button class="float-right btn btn-gradient-info btn-md m-3 mdi mdi-arrow-left newFont" onclick="goBack()">ย้อนกลับ</button>
                     <div class="col-12 grid-margin stretch-card">
                         <div class="card">
                             <div class="card-body">
@@ -126,66 +126,68 @@
 
 
 
-
-                    <div class="card">
-                        <div class="card-body">
-                            <div class="row">
-                                <div class="form-group col-md-12"></div>
-                                <div class="col-md-12 ">
-                                    <table class="table table-bordered newFont">
-                                        <div class="col-12" style="float:none;margin:auto;">
-                                            @if($yy == 0 || $mm ==0)
-                                            @else
-                                            <a href="/douwloadgone"><button class="float-right btn btn-success btn-fw m-3 mdi mdi-briefcase-download newFont"> download</button>
-                                                @endif
-                                        </div>
-                                        <thead>
-                                            <tr class="d-flex center">
-                                                <th class="col-sm-2" scope="col">
-                                                    <h7 class="newFont">ตัวชี้วัดตามคำรับรอง</h7>
-                                                </th>
-                                                <th class="col-sm-3" scope="col">
-                                                    <h7 class="newFont">เป้าหมายตามคำรับรอง</h7>
-                                                </th>
-                                                <th class="col-sm-1" scope="col">
-                                                    <h7 class="newFont">ผล</h7>
-                                                </th>
-                                                <th class="col-sm-1" scope="col">
-                                                    <h7 class="newFont">ร้อยละผลสำเร็จ</h7>
-                                                </th>
-                                                <th class="col-sm-3" scope="col">
-                                                    <h7 class="newFont">งานที่สำเร็จแล้ว/งานที่จะดำเนินการในอนาคต</h7>
-                                                </th>
-                                            </tr>
-                                        </thead>
-                                        <tbody>
-                                            @foreach ($search as $data)
-                                            <tr class="d-flex">
-                                                <th class="col-sm-2" scope="col">
-                                                    <h7 class="newFont">{{$data->nameObject}}</h7>
-                                                </th>
-                                                <th class="col-sm-3" scope="col">
-                                                    <h7 class="newFont">{{$data->nameKR}}</h7>
-                                                </th>
-                                                <th class="col-sm-1" scope="col">
-                                                    <h7 class="newFont">{{$data->result}}</h7>
-                                                </th>
-                                                <th class="col-sm-1" scope="col">
-                                                    <h7 class="newFont">{{$data->percent}}</h7>
-                                                </th>
-                                                <th class="col-sm-3" scope="col">
-                                                    <h7 class="newFont">{{$data->future_result}}</h7>
-                                                </th>
-                                                <th scope="col" class="newFont"><a href="/{{$data->KR_idKR}}"><button class="btn btn-gradient-info btn-md m-3 mdi mdi-elevation-decline newFont"> รายงานผล </button></a></th>
-                                            </tr>
-                                            @endforeach
-                                        </tbody>
-                                    </table>
+                    <div class="col-12 grid-margin stretch-card">
+                        <div class="card">
+                            <div class="card-body">
+                                <div class="row">
+                                    <div class="form-group col-md-12"></div>
+                                    <div class="col-md-12 ">
+                                        <table class="table table-bordered newFont">
+                                            <div class="col-12" style="float:none;margin:auto;">
+                                                @if($yy == 0 || $mm ==0)
+                                                @else
+                                                <a href="/douwloadgone"><button class="float-right btn btn-success btn-fw m-3 mdi mdi-briefcase-download newFont"> download</button>
+                                                    @endif
+                                            </div>
+                                            <thead>
+                                                <tr class="d-flex center">
+                                                    <th class="col-sm-2">
+                                                        <h7 class="newFont">ตัวชี้วัดตามคำรับรอง</h7>
+                                                    </th>
+                                                    <th class="col-sm-2">
+                                                        <h7 class="newFont">เป้าหมายตามคำรับรอง</h7>
+                                                    </th>
+                                                    <th class="col-sm-1">
+                                                        <h7 class="newFont">ผล</h7>
+                                                    </th>
+                                                    <th class="col-sm-2">
+                                                        <h7 class="newFont">ร้อยละผลสำเร็จ</h7>
+                                                    </th>
+                                                    <th class="col-sm-2">
+                                                        <h7 class="newFont">งานที่สำเร็จแล้ว</h7>
+                                                    </th>
+                                                    <th class="col-sm-3">
+                                                    </th>
+                                                </tr>
+                                            </thead>
+                                            <tbody>
+                                                @foreach ($search as $data)
+                                                <tr class="d-flex">
+                                                    <th class="col-sm-2" scope="col">
+                                                        <h7 class="newFont">{{$data->nameObject}}</h7>
+                                                    </th>
+                                                    <th class="col-sm-2" scope="col">
+                                                        <h7 class="newFont">{{$data->nameKR}}</h7>
+                                                    </th>
+                                                    <th class="col-sm-1" scope="col">
+                                                        <h7 class="newFont">{{$data->result}}</h7>
+                                                    </th>
+                                                    <th class="col-sm-2" scope="col">
+                                                        <h7 class="newFont">{{$data->percent}}</h7>
+                                                    </th>
+                                                    <th class="col-sm-2" scope="col">
+                                                        <h7 class="newFont">{{$data->future_result}}</h7>
+                                                    </th>
+                                                    <th scope="col" class="col-sm-3 newFont"><a href="/{{$data->KR_idKR}}"><button class="btn btn-gradient-info btn-md m-3 mdi mdi-elevation-decline newFont"> รายงานผล </button></a></th>
+                                                </tr>
+                                                @endforeach
+                                            </tbody>
+                                        </table>
+                                    </div>
                                 </div>
                             </div>
                         </div>
                     </div>
-
 
 
                     <!-- page-body-wrapper ends -->
@@ -209,8 +211,9 @@
             <!-- End custom js for this page -->
 </body>
 <script>
-function goBack() {
-    window.history.back();
-}
+    function goBack() {
+        window.history.back();
+    }
 </script>
+
 </html>
