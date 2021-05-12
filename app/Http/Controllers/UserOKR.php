@@ -11,11 +11,13 @@ class UserOKR extends Controller
 {
     public function index($idUser)
     {
+        $currentyear = DB::table('year')->where('flag', '=', 1)->value('year_id');
         $userObject = DB::table('object')
             ->join('kr', 'object.idobject', '=', 'kr.object_idobject')
             // ->leftJoin('krdetail', 'kr.idKR', '=', 'krdetail.KR_idKR')
             ->join('autrority', 'kr.idKR', '=', 'autrority.KR_idKR')
             ->where('autrority.Employee_id_employee', '=', $idUser)
+            ->where('object.year_year_id', '=', $currentyear)
             ->get();
         $uniqueObject = $userObject->groupBy("idobject");
         $mount = (int)date('m');
@@ -23,6 +25,7 @@ class UserOKR extends Controller
     }
     public function userKR($Object, $mount)
     {
+        $currentyear = DB::table('year')->where('flag', '=', 1)->value('year_id');
         $idUser = session()->get('user')['id_employee'];
         $userKR = DB::table('object')
             ->leftJoin('kr', 'object.idobject', '=', 'kr.object_idobject')
@@ -30,9 +33,10 @@ class UserOKR extends Controller
             ->leftJoin('autrority', 'kr.idKR', '=', 'autrority.KR_idKR')
             ->where('autrority.Employee_id_employee', '=', $idUser)
             ->where('krdetail.KR_object_idobject', '=', $Object)
+            ->where('krdetail.year_year_id', '=', $currentyear)
             ->where('krdetail.mount', '=', $mount)
             ->get();
-        return view('userGroup1.kr', compact('userKR', 'mount', 'Object','idUser'));
+        return view('userGroup1.kr', compact('userKR', 'mount', 'Object', 'idUser'));
     }
     public function updateKRdetail(Request $request)
     {
