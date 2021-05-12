@@ -1,3 +1,8 @@
+<?php
+$dp = session()->get('user')['id_department'];
+$p = session()->get('user')['id_position'];
+$role = session()->get('user')['status'];
+?>
 <div class="container-fluid page-body-wrapper">
   <nav class="sidebar sidebar-offcanvas" id="sidebar">
     <ul class="nav">
@@ -15,7 +20,7 @@
           {{-- <i class="mdi mdi-bookmark-check text-success nav-profile-badge"></i> --}}
         </a>
       </li>
-      <li class="nav-item">
+      <!-- <li class="nav-item">
         <a class="nav-link" data-toggle="collapse" href="#ui-basic" aria-expanded="false" aria-controls="ui-basic">
           <span class="menu-title">ALL Topic</span>
           <i class="menu-arrow"></i>
@@ -30,7 +35,8 @@
             <li class="nav-item"> <a class="nav-link" href="/createpart4">Add</a></li>
           </ul>
         </div>
-      </li>
+      </li> -->
+
       <li class="nav-item">
         <a class="nav-link" href="/userObject/{{session()->get('user')['id_employee']}}">
           <span class="menu-title">ส่วนที่ 1</span>
@@ -39,74 +45,90 @@
       </li>
       <li class="nav-item">
         <a class="nav-link" href="/section_one">
-          <span class="menu-title">Addmin ส่วนที่ 1</span>
+          <span class="menu-title">Admin ส่วนที่ 1</span>
+          <i class="mdi mdi-contacts menu-icon"></i>
+        </a>
+      </li>
+      <?php if ($dp == 2 && $p == 3) : ?>
+        <li class="nav-item">
+          <a class="nav-link" href="/createpart4">
+            <span class="menu-title">จัดการตัวชี้วัด</span>
+            <!-- d2 p3 -->
+            <i class="mdi mdi-contacts menu-icon"></i>
+          </a>
+        </li>
+      <?php endif ?>
+      <?php if ($dp == 2 && ($p != 1 && $p != 2)) : ?>
+        <li class="nav-item">
+          <a class="nav-link" href="/submit">
+            <span class="menu-title">บันทึกผลตามตัวชี้วัด</span>
+            <!-- d2 p!1 !2 -->
+            <i class="mdi mdi-contacts menu-icon"></i>
+          </a>
+        </li>
+      <?php endif ?>
+      <?php if ($dp == 1 || $dp == 2) : ?>
+        <li class="nav-item">
+          <a class="nav-link" href="/report">
+            <span class="menu-title">การสืบค้นและออกรายงาน</span>
+            <i class="mdi mdi-contacts menu-icon"></i>
+          </a>
+        </li>
+      <?php endif ?>
+      <?php if ($dp == 2 && $p == 3) : ?>
+        <li class="nav-item">
+          <a class="nav-link" href="/approve">
+            <span class="menu-title">Admin Confirm</span>
+            <!-- d2 p3 -->
+            <i class="mdi mdi-contacts menu-icon"></i>
+          </a>
+        </li>
+      <?php endif ?>
+      <?php if ($dp == 2 && $role == 2) : ?>
+        <li class="nav-item">
+          <a class="nav-link" href="/createPart2">
+            <span class="menu-title">เพิ่มตัวชี้วัด</span>
+            <!-- d2 s2 -->
+            <i class="mdi mdi-contacts menu-icon"></i>
+          </a>
+        </li>
+      <?php endif ?>
+      <li class="nav-item">
+        <a class="nav-link" href="/contentPart2">
+          <span class="menu-title">เพิ่มข้อมูลตัวชี้วัด(รายเดือน)</span>
           <i class="mdi mdi-contacts menu-icon"></i>
         </a>
       </li>
       <li class="nav-item">
-        <a class="nav-link" href="/createpart4">
-          <span class="menu-title">จัดการตัวชี้วัด</span>
+        <a class="nav-link" href="/contentPart2Year">
+          <span class="menu-title">เพิ่มข้อมูลตัวชี้วัด(รายปี)</span>
           <i class="mdi mdi-contacts menu-icon"></i>
         </a>
       </li>
       <li class="nav-item">
-        <a class="nav-link" href="/submit">
-          <span class="menu-title">บันทึกผลตามตัวชี้วัด</span>
-          <i class="mdi mdi-contacts menu-icon"></i>
-        </a>
-      </li>
-      <li class="nav-item">
-        <a class="nav-link" href="/report">
-          <span class="menu-title">การสืบค้นและออกรายงาน</span>
-          <i class="mdi mdi-contacts menu-icon"></i>
-        </a>
-      </li>
-      <li class="nav-item">
-        <a class="nav-link" href="/approve">
-          <span class="menu-title">Admin Confirm</span>
-          <i class="mdi mdi-contacts menu-icon"></i>
-        </a>
-      </li>
-      <li class="nav-item">
-        <a class="nav-link" href="http://127.0.0.1:8000/createPart2">
-          <span class="menu-title">เพิ่มตัวชี้วัด</span>
-          <i class="mdi mdi-contacts menu-icon"></i>
-        </a>
-      </li>
-      <li class="nav-item">
-        <a class="nav-link" href="http://127.0.0.1:8000/contentPart2">
-          <span class="menu-title">เพิ่มข้อมูลรายเดือน</span>
-          <i class="mdi mdi-contacts menu-icon"></i>
-        </a>
-      </li>
-      <li class="nav-item">
-        <a class="nav-link" href="http://127.0.0.1:8000/contentPart2Year">
-          <span class="menu-title">เพิ่มข้อมูลรายปี</span>
-          <i class="mdi mdi-contacts menu-icon"></i>
-        </a>
-      </li>
-      <li class="nav-item">
-        <a class="nav-link" href="http://127.0.0.1:8000/searchPart2">
+        <a class="nav-link" href="/searchPart2">
           <span class="menu-title">ค้นหาข้อมูลย้อนหลัง</span>
           <i class="mdi mdi-contacts menu-icon"></i>
         </a>
       </li>
-      <li class="nav-item">
-        <a class="nav-link" href="http://127.0.0.1:8000/confirmPart2">
-          <span class="menu-title">ยืนยันข้อมูลตัวชี้วัดรายเดือน</span>
-          <i class="mdi mdi-contacts menu-icon"></i>
-        </a>
-      </li>
-      <li class="nav-item">
-        <a class="nav-link" href="http://127.0.0.1:8000/confirmPart2Year">
-          <span class="menu-title">ยืนยันข้อมูลตัวชี้วัดรายปี</span>
-          <i class="mdi mdi-contacts menu-icon"></i>
-        </a>
-      </li>
-
+      <?php if ($dp == 4 && $role == 2) : ?>
+        <li class="nav-item">
+          <a class="nav-link" href="/confirmPart2">
+            <span class="menu-title">ยืนยันข้อมูลตัวชี้วัด(รายเดือน)</span>
+            <!-- s2  d4 -->
+            <i class="mdi mdi-contacts menu-icon"></i>
+          </a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="/confirmPart2Year">
+            <span class="menu-title">ยืนยันข้อมูลตัวชี้วัด(รายปี)</span>
+            <!-- s2  d4 -->
+            <i class="mdi mdi-contacts menu-icon"></i>
+          </a>
+        </li>
+      <?php endif ?>
     </ul>
   </nav>
-
   <!-- partial -->
 
   <style>
