@@ -2,8 +2,6 @@
 
 namespace App\Http\Controllers;
 
-use Illuminate\Http\Request;
-use App\Http\Controllers;
 use Illuminate\Support\Facades\DB;
 
 
@@ -27,31 +25,31 @@ class GraphPart2Controller extends Controller
 
         $year = $data[0]->year;
 
-        $m0 = $data[0]->full_score;
-        $m1 = $data[1]->full_score;
-        $m2 = $data[2]->full_score;
-        $m3 = $data[3]->full_score;
-        $m4 = $data[4]->full_score;
-        $m5 = $data[5]->full_score;
-        $m6 = $data[6]->full_score;
-        $m7 = $data[7]->full_score;
-        $m8 = $data[8]->full_score;
-        $m9 = $data[9]->full_score;
-        $m10 = $data[10]->full_score;
-        $m11 = $data[11]->full_score;
+        $m0 = $data[9]->full_score;
+        $m1 = $data[10]->full_score;
+        $m2 = $data[11]->full_score;
+        $m3 = $data[0]->full_score;
+        $m4 = $data[1]->full_score;
+        $m5 = $data[2]->full_score;
+        $m6 = $data[3]->full_score;
+        $m7 = $data[4]->full_score;
+        $m8 = $data[5]->full_score;
+        $m9 = $data[6]->full_score;
+        $m10 = $data[7]->full_score;
+        $m11 = $data[8]->full_score;
 
-        $s0 = $data[0]->score;
-        $s1 = $data[1]->score;
-        $s2 = $data[2]->score;
-        $s3 = $data[3]->score;
-        $s4 = $data[4]->score;
-        $s5 = $data[5]->score;
-        $s6 = $data[6]->score;
-        $s7 = $data[7]->score;
-        $s8 = $data[8]->score;
-        $s9 = $data[9]->score;
-        $s10 = $data[10]->score;
-        $s11 = $data[11]->score;
+        $s0 = $data[9]->score;
+        $s1 = $data[10]->score;
+        $s2 = $data[11]->score;
+        $s3 = $data[0]->score;
+        $s4 = $data[1]->score;
+        $s5 = $data[2]->score;
+        $s6 = $data[3]->score;
+        $s7 = $data[4]->score;
+        $s8 = $data[5]->score;
+        $s9 = $data[6]->score;
+        $s10 = $data[7]->score;
+        $s11 = $data[8]->score;
 
 
 

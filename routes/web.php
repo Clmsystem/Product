@@ -26,7 +26,6 @@ use App\Http\Controllers\Showobject;
 /*
 /************************************************ GROUP 3**********************************************************/
 
-use App\Http\Controllers\Controller;
 use App\Http\Controllers\CreatePart2Controller;
 use App\Http\Controllers\ContentPart2Controller;
 use App\Http\Controllers\ContentPart2YearController;
@@ -54,8 +53,6 @@ try {
     Route::post('/index', function () {
         return view('index');
     })->name('/');
-
-
 
     Route::get('/', function () {
         if (session()->has('user')) {
