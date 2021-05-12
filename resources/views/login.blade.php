@@ -60,6 +60,16 @@
                                         href="register.html" class="text-primary">Create</a>
                                 </div>
                             </form>
+                            <?php if(session()->has('status')){
+                                $message = session()->get('status');
+                              echo "<script type='text/javascript'>alert('$message');</script>";
+                              session()->forget('status');
+                            }?>
+                            <?php if(session()->has('mes')){
+                                $mess = session()->get('mes');
+                              echo "<script type='text/javascript'>alert('$mess');</script>";
+                              session()->forget('mes');
+                            }?>
                         </div>
                     </div>
                 </div>

@@ -1,28 +1,18 @@
-
-
-
 <div class="container-fluid page-body-wrapper">
   <nav class="sidebar sidebar-offcanvas" id="sidebar">
     <ul class="nav">
       <li class="nav-item nav-profile">
-        <a href="#" class="nav-link">
+        <a href="/" class="nav-link">
           <div class="nav-profile-image">
-            <img src= "{{session()->get('user')['img']}}" class="sizeimg"  alt="profile">
+            <img src="{{session()->get('user')['img']}}" class="sizeimg" alt="profile">
             {{-- <span class="login-status online"></span> --}}
             <!--change to offline or busy as needed-->
           </div>
           <div class="nav-profile-text d-flex flex-column">
             <span class="font-weight-bold mb-2" style="text-align: center;">{{session()->get('user')['name_employee']}}</span>
-            <span class="text-secondary text-small"
-              style="word-wrap: break-word; white-space: normal; text-align: center; margin-left:1px;">{{session()->get('user')['name_position']}}</span>
+            <span class="text-secondary text-small" style="word-wrap: break-word; white-space: normal; text-align: center; margin-left:1px;">{{session()->get('user')['name_position']}}</span>
           </div>
           {{-- <i class="mdi mdi-bookmark-check text-success nav-profile-badge"></i> --}}
-        </a>
-      </li>
-      <li class="nav-item">
-        <a class="nav-link" href="index.html">
-          <span class="menu-title">Dashboard</span>
-          <i class="mdi mdi-home menu-icon"></i>
         </a>
       </li>
       <li class="nav-item">
@@ -42,12 +32,6 @@
         </div>
       </li>
       <li class="nav-item">
-        <a class="nav-link" href="pages/icons/mdi.html">
-          <span class="menu-title">Member</span>
-          <i class="mdi mdi-contacts menu-icon"></i>
-        </a>
-      </li>
-      <li class="nav-item">
         <a class="nav-link" href="/createpart4">
           <span class="menu-title">จัดการตัวชี้วัด</span>
           <i class="mdi mdi-contacts menu-icon"></i>
@@ -65,6 +49,12 @@
           <i class="mdi mdi-contacts menu-icon"></i>
         </a>
       </li>
+      <li class="nav-item">
+        <a class="nav-link" href="/approve">
+          <span class="menu-title">Admin Confirm</span>
+          <i class="mdi mdi-contacts menu-icon"></i>
+        </a>
+      </li>
 
     </ul>
   </nav>
@@ -72,7 +62,7 @@
   <!-- partial -->
 
   <style>
-    .sizeimg{
+    .sizeimg {
       /* width: 70px;
       height: 70px; */
       border-radius: 100%;
@@ -80,11 +70,10 @@
       margin-top: -13px;
       margin-left: -20px
     }
-    .sidebar .nav .nav-item.nav-profile .nav-link .nav-profile-image img {
-    width: 70px;
-    height: 70px;
-    border-radius: 100%;
-}
 
-    
+    .sidebar .nav .nav-item.nav-profile .nav-link .nav-profile-image img {
+      width: 70px;
+      height: 70px;
+      border-radius: 100%;
+    }
   </style>
