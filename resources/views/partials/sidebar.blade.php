@@ -55,6 +55,42 @@
           <i class="mdi mdi-contacts menu-icon"></i>
         </a>
       </li>
+      <li class="nav-item">
+                <a class="nav-link" href="http://127.0.0.1:8000/createPart2">
+                    <span class="menu-title">เพิ่มตัวชี้วัด</span>
+                    <i class="mdi mdi-contacts menu-icon"></i>
+                </a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="http://127.0.0.1:8000/contentPart2">
+                    <span class="menu-title">เพิ่มข้อมูลรายเดือน</span>
+                    <i class="mdi mdi-contacts menu-icon"></i>
+                </a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="http://127.0.0.1:8000/contentPart2Year">
+                    <span class="menu-title">เพิ่มข้อมูลรายปี</span>
+                    <i class="mdi mdi-contacts menu-icon"></i>
+                </a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="http://127.0.0.1:8000/searchPart2">
+                    <span class="menu-title">ค้นหาข้อมูลย้อนหลัง</span>
+                    <i class="mdi mdi-contacts menu-icon"></i>
+                </a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="http://127.0.0.1:8000/confirmPart2">
+                    <span class="menu-title">ยืนยันข้อมูลตัวชี้วัดรายเดือน</span>
+                    <i class="mdi mdi-contacts menu-icon"></i>
+                </a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="http://127.0.0.1:8000/confirmPart2Year">
+                    <span class="menu-title">ยืนยันข้อมูลตัวชี้วัดรายปี</span>
+                    <i class="mdi mdi-contacts menu-icon"></i>
+                </a>
+            </li>
 
     </ul>
   </nav>
