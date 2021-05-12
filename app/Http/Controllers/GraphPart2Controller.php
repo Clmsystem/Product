@@ -14,34 +14,47 @@ class GraphPart2Controller extends Controller
     public function index()
     {
         $indicator_id = $_GET['id'];
-        $year_item = $_GET['years'];
-        $data = DB::table('employee')
-            ->join('assign', 'employee.id_employee', '=', 'assign.Employee_id_employee')
-            ->join('indicator', 'assign.indicator_id', '=', 'indicator.indicator_id')
-            ->join('indicator_month', 'indicator.indicator_id', '=', 'indicator_month.indicator_id')
+        $year = $_GET['years'];
+        $data = DB::table('indicator_month')
+            ->join('indicator', 'indicator_month.indicator_id', 'indicator.indicator_id')
             ->join('year', 'indicator_month.year_id', '=', 'year.year_id')
-            ->where('employee.indicator_id', '=', $indicator_id)
-            ->where('employee.year_id', '=', $year_item)
-            ->select('employee.indicator_name', 'employee.month','indicator.fullscore','indicator.score')
+            ->where('indicator_month.indicator_id', '=', $indicator_id)
+            ->where('indicator_month.year_id', '=', $year)
             ->get();
 
 
-    
-            $name = $data[0]->indicator_name;
-            $year = $data[0]->year;
+        $name = $data[0]->indicator_name;
 
-            $m0 = $data[0]->count;
-            $m1 = $data[1]->count;
-            $m2 = $data[2]->count;
-            $m3 = $data[3]->count;
-            $m4 = $data[4]->count;
-            $m5 = $data[5]->count;
-            $m6 = $data[6]->count;
-            $m7 = $data[7]->count;
-            $m8 = $data[8]->count;
-            $m9 = $data[9]->count;
-            $m10 = $data[10]->count;
-            $m11 = $data[11]->count;
-        return view('Graph', compact('m0', 'm1', 'm2', 'm3', 'm4', 'm5', 'm6', 'm7', 'm8', 'm9', 'm10', 'm11','name','year'));
+        $year = $data[0]->year;
+
+        $m0 = $data[0]->full_score;
+        $m1 = $data[1]->full_score;
+        $m2 = $data[2]->full_score;
+        $m3 = $data[3]->full_score;
+        $m4 = $data[4]->full_score;
+        $m5 = $data[5]->full_score;
+        $m6 = $data[6]->full_score;
+        $m7 = $data[7]->full_score;
+        $m8 = $data[8]->full_score;
+        $m9 = $data[9]->full_score;
+        $m10 = $data[10]->full_score;
+        $m11 = $data[11]->full_score;
+
+        $s0 = $data[0]->score;
+        $s1 = $data[1]->score;
+        $s2 = $data[2]->score;
+        $s3 = $data[3]->score;
+        $s4 = $data[4]->score;
+        $s5 = $data[5]->score;
+        $s6 = $data[6]->score;
+        $s7 = $data[7]->score;
+        $s8 = $data[8]->score;
+        $s9 = $data[9]->score;
+        $s10 = $data[10]->score;
+        $s11 = $data[11]->score;
+
+
+
+        return view('graphPart2', compact('m0', 'm1', 'm2', 'm3', 'm4', 'm5', 'm6', 'm7', 'm8', 'm9', 'm10', 'm11', 'name', 'year', 's0', 's1', 's2', 's3', 's4', 's5', 's6', 's7', 's8', 's9', 's10', 's11'));
     }
 };

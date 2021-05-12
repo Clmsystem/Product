@@ -34,6 +34,7 @@ use App\Http\Controllers\SearchPart2Controller;
 use App\Http\Controllers\ConfirmPart2Controller;
 use App\Http\Controllers\ConfirmPart2YearController;
 use App\Http\Controllers\GraphPart2Controller;
+use App\Http\Controllers\GraphPart2YearController;
 /************************************************  END GROUP 3**********************************************************/
 
 
@@ -142,7 +143,7 @@ try {
 
     Route::post('/createPart2/insert_indicator', [CreatePart2Controller::class, 'insert_indicator'])->name('insert_indicator');
 
-
+    Route::get('/graphPart2Year', [GraphPart2YearController::class, 'index']);
     Route::get('/graphPart2', [GraphPart2Controller::class, 'index']);
 
      /********************************************* END GROUP 3 ***********************************************/
