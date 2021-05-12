@@ -93,6 +93,15 @@ $role = session()->get('user')['status'];
           </a>
         </li>
       <?php endif ?>
+      <?php if ($role == 3) : ?>
+        <li class="nav-item">
+          <a class="nav-link" href="/management">
+            <span class="menu-title">การจัดการภาพรวม</span>
+            <!-- d2 s2 -->
+            <i class="mdi mdi-contacts menu-icon"></i>
+          </a>
+        </li>
+      <?php endif ?>
       <li class="nav-item">
         <a class="nav-link" href="/contentPart2">
           <span class="menu-title">เพิ่มข้อมูลตัวชี้วัด(รายเดือน)</span>

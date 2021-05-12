@@ -1,10 +1,11 @@
 <?php
 
-/********************************************* GROUP 1 ***********************************************/
+/********************************************* GROUP 2 ***********************************************/
 
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\LoginController;
 use App\Http\Controllers\CreatePart4Controller;
+use App\Http\Controllers\ManagementController;
 
 use App\Http\Controllers\ReportController;
 use App\Http\Controllers\GraphController;
@@ -13,16 +14,16 @@ use App\Http\Controllers\ApproveController;
 use App\Http\Controllers\insertController;
 use App\Http\Controllers\FileUploadController;
 
-/********************************************* END GROUP 1 ***********************************************/
+/********************************************* END GROUP 2 ***********************************************/
 
-/********************************************* GROUP 2 ***********************************************/
+/********************************************* GROUP 1 ***********************************************/
 
 use App\Http\Controllers\Kr;
 use App\Http\Controllers\ObjectGroup1;
 use App\Http\Controllers\UserOKR;
 use App\Http\Controllers\Showobject;
 
-/********************************************* END GROUP 2 ***********************************************/
+/********************************************* END GROUP 1 ***********************************************/
 /*
 /************************************************ GROUP 3**********************************************************/
 
@@ -100,6 +101,10 @@ try {
     Route::post('file-upload', [FileUploadController::class, 'store'])->name('file.upload.post')->middleware('AuthLogin');
     Route::get('file/download', [FileUploadController::class, 'getfile'])->middleware('AuthLogin');
     Route::get('file-upload', [FileUploadController::class, 'store'])->name('file.upload.get')->middleware('AuthLogin');
+
+    Route::resource('/management', ManagementController::class)->middleware('AuthLogin');
+    Route::post('/manageted', [ManagementController::class, 'manageted'])->middleware('AuthLogin');
+    Route::post('/manageted/delete', [ManagementController::class, 'delete_row'])->middleware('AuthLogin');
 
     /********************************************* END GROUP 2 ***********************************************/
     /********************************************* END GROUP 2 ***********************************************/
