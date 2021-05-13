@@ -103,7 +103,7 @@
     var optionsMonth = {
       series: [{
         name: 'ร้อยละ',
-        data: [str10, str11, str12str1, str2, str3, str4, str5, str6, str7, str8, str9, ]
+        data: [str10, str11, str12, str1, str2, str3, str4, str5, str6, str7, str8, str9, ]
       }, ],
       chart: {
         type: 'bar',

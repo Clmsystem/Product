@@ -170,13 +170,13 @@
 
                                                         <h7 class="newFont" style="word-wrap:break-word">{{$data->nameKR}}</h7>
                                                     </td>
-                                                    <td class="col-sm-1" scope="col">
+                                                    <td class="col-sm-1  break" scope="col">
                                                         <h7 class="newFont">{{$data->result}}</h7>
                                                     </td>
-                                                    <td class="col-sm-2" scope="col">
+                                                    <td class="col-sm-2  break" scope="col">
                                                         <h7 class="newFont">{{$data->percent}}</h7>
                                                     </td>
-                                                    <td class="col-sm-2" scope="col">
+                                                    <td class="col-sm-2  break" scope="col">
                                                         <h7 class="newFont">{{$data->future_result}}</h7>
                                                     </td>
                                                     <th scope="col" class="col-sm-3 newFont"><a href="/{{$data->KR_idKR}}"><button class="btn btn-gradient-info btn-md m-3 mdi mdi-elevation-decline newFont"> รายงานผล </button></a></th>
