@@ -197,37 +197,42 @@
                                                                     </div>
                                                                     <div class="form-group col-md-6">
                                                                         <label class="newFont">แผนก</label>
-                                                                        <input name="value_of_item" type="text" value="{{ $value->id_employee }}" hidden>
-                                                                        <input type="text" class="form-control" name="name_department" placeholder="" value="{{ $value->name_department }}" required>
-                                                     
+                                                                        <select class="form-control " name="department" id="department" style="width:auto;">
+                                                                        <?php 
+                                                                            for ($i=0; $i < count($department); $i++) { 
+                                                                                $selected = ($department[$i]->id_department == $value->id_department ? 'selected' : ''); 
+                                                                                echo '<option  value="'.$department[$i]->id_department.'"'.$selected.'>'.$department[$i]->name_department.'</option>';
+                                                                            }
+                                                                        ?>
+                                                                        </select>
                                                                     </div>
                                                                     <div class="form-group col-md-6">
                                                                         <label class="newFont">ตำแหน่ง</label>
-                                                                        <input name="value_of_item" type="text" value="{{ $value->id_employee }}" hidden>
-                                                                        <input type="text" class="form-control" name="name_position" placeholder="" value="{{ $value->name_position }}" required>
-                                                                
+                                                                        <select class="form-control " name="position" id="position" style="width:auto;">
+                                                                        <?php 
+                                                                            for ($i=0; $i < count($position_list); $i++) { 
+                                                                                $selected = ($position_list[$i]->id_position == $value->id_position ? 'selected' : ''); 
+                                                                                echo '<option  value="'.$position_list[$i]->id_position.'"'.$selected.'>'.$position_list[$i]->name_position.'</option>';
+                                                                            }
+                                                                        ?>
+                                                                        </select>
                                                                     </div>
                                                                     <div class="form-group col-md-6">
                                                                         <label class="newFont">สถานะผู้ใช้งาน</label>
-                                                                        <input name="value_of_item" type="text" value="{{ $value->id_employee }}" hidden>
-                                                                        <input type="text" class="form-control" name="code_name" placeholder="" value="{{ $value->code_name }}" required>
                                                                         <select class="form-control " name="status" id="status" style="width:auto;">
+                                                                            <optgroup class="newFont" label="">
                                                                             <?php 
-                                                                            for ($i=0; $i <=3; $i++) { 
-                                                                                $selected = ($i  === $value->status ? 'selected' : ''); 
+                                                                            for ($i=0; $i < count($status); $i++) { 
+                                                                                $selected = ($status[$i]->id_status == $value->status ? 'selected' : ''); 
+                                                                                echo '<option  value="'.$status[$i]->id_status.'"'.$selected.'>'.$status[$i]->code_name.'</option>';
                                                                             }
                                                                             ?>
-                                                                            <optgroup class="newFont" label="">
-
-                                                                                <option <?php $selected?> value="3">super_admin</option>
-                                                                                <option <?php $selected?> value="2">admin</option>
-                                                                                <option <?php $selected?> value="1">user</option>
                                                                              </optgroup>
                                                                         </select>
                                                                     </div>
                                                                     <div class="form-group col-md-6">
                                                                         <label class="newFont">password</label>
-                                                                        <input name="value_of_item" type="text" value="{{ $value->id_employee }}" hidden>
+                                                                        <!-- <input name="value_of_item" type="text" value="{{ $value->id_employee }}" hidden> -->
                                                                         <input type="text" class="form-control" name="password" placeholder="" value="{{ $value->password }}" required>
                                                                     </div>
                                                                 </div>

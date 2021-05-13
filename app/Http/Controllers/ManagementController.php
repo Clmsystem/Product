@@ -23,10 +23,18 @@ class ManagementController extends Controller
       ->join('status_code', 'status_code.id_status', '=', 'employee.status')
       ->orderBy('employee.status', 'desc')
       ->get();
+    $status = DB::table('status_code')
+      ->get();
+
+    $position_list = DB::table('position_list')
+    ->get();
+
+    $department = DB::table('department')
+    ->get();
 
     $years = 0;
     $yearSelected = $year[0]->year;
-    return view('Management', compact('currentYear', 'yearSelected', 'year', 'years', 'emp'));
+    return view('Management', compact('currentYear', 'yearSelected', 'year', 'years', 'emp','status','position_list','department'));
   }
   public function manageted(Request $request)
   {
@@ -71,9 +79,10 @@ class ManagementController extends Controller
 
   public function update(Request $request)
   {
+    // dd($request);
     DB::table('employee')
       ->where('id_employee', $request->id_employee)
-      ->update(['name_employee' => $request->name_employee, 'id_position' => $request->id_position, 'id_department' => $request->id_department, 'password' => $request->password, 'status' => $request->status]);
+      ->update(['name_employee' => $request->name_employee, 'id_position' => $request->position, 'id_department' => $request->department, 'password' => $request->password, 'status' => $request->status]);
     return redirect('/management')->with('alert', 'อัพเดทเรียบร้อยแล้ว');
   }
 }
