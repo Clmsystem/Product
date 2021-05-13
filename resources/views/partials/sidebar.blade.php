@@ -129,14 +129,14 @@ $role = session()->get('user')['status'];
             <?php if ($dp == 4 && $role == 2) : ?>
             <li class="nav-item">
                 <a class="nav-link" href="/confirmPart2">
-                    <span class="menu-title">ยืนยันข้อมูลตัวชี้วัด(รายเดือน)</span>
+                    <span class="menu-title">ส่วนที่ 2 ยืนยันตัวชี้วัด(เดือน)</span>
                     <!-- s2  d4 -->
                     <i class="mdi mdi-contacts menu-icon"></i>
                 </a>
             </li>
             <li class="nav-item">
                 <a class="nav-link" href="/confirmPart2Year">
-                    <span class="menu-title">ยืนยันข้อมูลตัวชี้วัด(รายปี)</span>
+                    <span class="menu-title">ส่วนที่ 2 ยืนยันตัวชี้วัด(ปี)</span>
                     <!-- s2  d4 -->
                     <i class="mdi mdi-contacts menu-icon"></i>
                 </a>
