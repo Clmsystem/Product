@@ -64,7 +64,7 @@ th.break {
             <div class="col-12 grid-margin stretch-card">
                 <div class="card">
                     <div class="card-body">
-                        <h3 class="newFont">ค้นหาข้อมูล</h3><br>
+                        <h3 class="newFont">ค้นหาข้อมูลย้อนหลัง</h3><br>
                         <hr><br>
                         <form class="forms-sample" action="/searchPart2" method="post" enctype="multipart/form-data">
                             @csrf
@@ -126,17 +126,19 @@ th.break {
 
                         </div>
                         <div class="form-group col-md-12">
-                            <h3 class="newFont">ตัวชี้วัดปัจจุบัน</h3><br>
+                            <h3 class="newFont">ตัวชี้วัด (รายเดือน)</h3><br>
 
                             <div class="button-position">
                                 <button type="submit" name="download" value="download"
-                                    class="btn btn-gradient-primary mr-2 newFont">ดาวน์โหลด</button>
+                                    class="btn btn-gradient-info mr-2 newFont">ดาวน์โหลด .csv</button>
 
 
                             </div>
                             <br>
-                        </div>
+                            <br>
 
+                        </div>
+                        <hr>
                         <div class="row">
                             <div class="form-group col-md-12"></div>
                             <div class="col-md-12">
@@ -189,15 +191,16 @@ th.break {
 
                         </div>
                         <div class="form-group col-md-12">
-                            <h3 class="newFont">ตัวชี้วัดปัจจุบัน (รายปี)</h3><br>
+                            <h3 class="newFont">ตัวชี้วัด (รายปี)</h3><br>
+
                             <div class="button-position">
                                 <button type="submit" name="download2" value="download2"
-                                    class="btn btn-gradient-primary mr-2 newFont">ดาวน์โหลด</button>
-
+                                    class="btn btn-gradient-info mr-2 newFont">ดาวน์โหลด .csv</button>
                             </div>
-
+                            <br>
                             <br>
                         </div>
+                        <hr>
                         </form>
                         <div class="row">
                             <div class="form-group col-md-12"></div>
