@@ -28,7 +28,7 @@
                 <span class="mdi mdi-menu"></span>
             </button>
             <ul class="navbar-nav navbar-nav">
-                <p class="newFont pp"> ยินดีตอนรับคุณ {{session()->get('user')['name_employee']}} เข้าสู่ระบบออกรายงานศูนย์บรรณสารและสื่อการศึกษา มหาวิทยาลัยวลัยลักษณ์ </p>
+                <p class="newFont pp"> ยินดีต้อนรับคุณ {{session()->get('user')['name_employee']}} เข้าสู่ระบบออกรายงานศูนย์บรรณสารและสื่อการศึกษา มหาวิทยาลัยวลัยลักษณ์ </p>
             </ul>
             <ul class="navbar-nav navbar-nav">
                 <li class="nav-item d-none d-lg-block full-screen-link">

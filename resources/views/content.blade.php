@@ -58,7 +58,7 @@
         <div class="col-12 grid-margin">
             <div class="card">
                 <div class="card-body">
-                    <h2 class="newFont">ยินดีตอนรับ คุณ{{ session()->get('user')['name_employee'] }}</h2>
+                    <h3 class="newFont">ยินดีต้อนรับ คุณ{{ session()->get('user')['name_employee'] }}</h3>
                     <hr>
                     <div class="row">
                         <div class="col-md-6">
@@ -67,11 +67,11 @@
                         <div class="col-md-6">
                             <div class="marginer">
                                 <br>
-                                <h3 class="newFont">ชื่อ-สกุล : {{ session()->get('user')['name_employee'] }}</h3>
+                                <h4 class="newFont">ชื่อ-สกุล : {{ session()->get('user')['name_employee'] }}</h4>
                                 <br>
-                                <h3 class="newFont">ตำแหน่ง : {{ session()->get('user')['name_position'] }}</h3>
+                                <h4 class="newFont">ตำแหน่ง : {{ session()->get('user')['name_position'] }}</h4>
                                 <br>
-                                <h3 class="newFont">แผนก : {{ session()->get('user')['name_department'] }}</h3>
+                                <h4 class="newFont">แผนก : {{ session()->get('user')['name_department'] }}</h4>
                                 <br>
                             </div>
 
