@@ -86,7 +86,7 @@ $role = session()->get('user')['status'];
                 </a>
             </li>
             <?php endif ?>
-            <?php if ($dp == 2 && $role == 2) : ?>
+            <?php if ($dp == 4 && $role == 2) : ?>
             <li class="nav-item">
                 <a class="nav-link" href="/createPart2">
                     <span class="menu-title">เพิ่มตัวชี้วัด</span>
