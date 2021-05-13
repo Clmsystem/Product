@@ -12,7 +12,7 @@
 
     .pp {
         margin-top: 17px;
-        margin-left: 150px;
+        /* margin-left: 150px; */
         /* align-items: center; */
     }
 </style>

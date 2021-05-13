@@ -75,6 +75,7 @@ class ManagementController extends Controller
     DB::table('employee')
       ->where('id_employee', $request->del)
       ->delete();
+      return redirect('/management')->with('alert', 'ลบข้อมูล เรียบร้อยแล้ว');
   }
 
   public function update(Request $request)
