@@ -141,19 +141,19 @@
                                             </div>
                                             <thead>
                                                 <tr class="d-flex center">
-                                                    <th class="col-sm-2">
+                                                    <th class="col-sm-2" scope="col">
                                                         <h7 class="newFont">ตัวชี้วัดตามคำรับรอง</h7>
                                                     </th>
-                                                    <th class="col-sm-2">
+                                                    <th class="col-sm-2" scope="col">
                                                         <h7 class="newFont">เป้าหมายตามคำรับรอง</h7>
                                                     </th>
-                                                    <th class="col-sm-1">
+                                                    <th class="col-sm-1" scope="col">
                                                         <h7 class="newFont">ผล</h7>
                                                     </th>
-                                                    <th class="col-sm-2">
+                                                    <th class="col-sm-2" scope="col">
                                                         <h7 class="newFont">ร้อยละผลสำเร็จ</h7>
                                                     </th>
-                                                    <th class="col-sm-2">
+                                                    <th class="col-sm-2" scope="col">
                                                         <h7 class="newFont">งานที่สำเร็จแล้ว</h7>
                                                     </th>
                                                     <th class="col-sm-3">
@@ -163,21 +163,22 @@
                                             <tbody>
                                                 @foreach ($search as $data)
                                                 <tr class="d-flex">
-                                                    <th class="col-sm-2" scope="col">
-                                                        <h7 class="newFont">{{$data->nameObject}}</h7>
-                                                    </th>
-                                                    <th class="col-sm-2" scope="col">
-                                                        <h7 class="newFont">{{$data->nameKR}}</h7>
-                                                    </th>
-                                                    <th class="col-sm-1" scope="col">
+                                                    <td class="col-sm-2 break" scope="col">
+                                                        <h7 class="newFont" style="word-wrap:break-word">{{$data->nameObject}}</h7>
+                                                    </td>
+                                                    <td class="col-sm-2 break" scope="col">
+
+                                                        <h7 class="newFont" style="word-wrap:break-word">{{$data->nameKR}}</h7>
+                                                    </td>
+                                                    <td class="col-sm-1" scope="col">
                                                         <h7 class="newFont">{{$data->result}}</h7>
-                                                    </th>
-                                                    <th class="col-sm-2" scope="col">
+                                                    </td>
+                                                    <td class="col-sm-2" scope="col">
                                                         <h7 class="newFont">{{$data->percent}}</h7>
-                                                    </th>
-                                                    <th class="col-sm-2" scope="col">
+                                                    </td>
+                                                    <td class="col-sm-2" scope="col">
                                                         <h7 class="newFont">{{$data->future_result}}</h7>
-                                                    </th>
+                                                    </td>
                                                     <th scope="col" class="col-sm-3 newFont"><a href="/{{$data->KR_idKR}}"><button class="btn btn-gradient-info btn-md m-3 mdi mdi-elevation-decline newFont"> รายงานผล </button></a></th>
                                                 </tr>
                                                 @endforeach

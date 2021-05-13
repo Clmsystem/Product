@@ -134,7 +134,7 @@
                     <table class="table table-bordered newFont">
                       <thead>
                         <tr class="d-flex center">
-                          <th class="col-sm-2" scope="col">
+                          <th class="col-sm-3" scope="col">
                             <h7 class="newFont">ตัวชี้วัดตามคำรับรอง</h7>
                           </th>
                           <th class="col-sm-3" scope="col">
@@ -146,8 +146,8 @@
                           <th class="col-sm-2" scope="col">
                             <h7 class="newFont">ร้อยละผลสำเร็จ</h7>
                           </th>
-                          <th class="col-sm-4" scope="col">
-                            <h7 class="newFont">งานที่สำเร็จแล้ว/งานที่จะดำเนินการในอนาคต</h7>
+                          <th class="col-sm-3" scope="col">
+                            <h7 class="newFont">งานที่สำเร็จแล้ว</h7>
                           </th>
 
                         </tr>
@@ -155,21 +155,21 @@
                       <tbody>
                         @foreach ($search as $data)
                         <tr class="d-flex">
-                          <th class="col-sm-2" scope="col">
+                          <td class="col-sm-3 break" scope="col">
                             <h7 class="newFont">{{$data->nameObject}}</h7>
-                          </th>
-                          <th class="col-sm-3" scope="col">
+                          </td>
+                          <td class="col-sm-3 break" scope="col">
                             <h7 class="newFont">{{$data->nameKR}}</h7>
-                          </th>
-                          <th class="col-sm-1" scope="col">
+                          </td>
+                          <td class="col-sm-1 break" scope="col">
                             <h7 class="newFont">{{$data->result}}</h7>
-                          </th>
-                          <th class="col-sm-2" scope="col">
+                          </td>
+                          <td class="col-sm-2 break" scope="col">
                             <h7 class="newFont">{{$data->percent}}</h7>
-                          </th>
-                          <th class="col-sm-4" scope="col">
+                          </td>
+                          <td class="col-sm-3 break" scope="col">
                             <h7 class="newFont">{{$data->future_result}}</h7>
-                          </th>
+                          </td>
 
                         </tr>
                         @endforeach
