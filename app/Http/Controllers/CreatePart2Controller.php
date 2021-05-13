@@ -12,6 +12,11 @@ class CreatePart2Controller extends Controller
     public function index()
     {
         $year = DB::table('year')->where('flag', 1)->get();
+        $YearShow = DB::table('year')
+            ->where('flag', 1)
+            ->select('year')
+            ->get();
+        $YearShow = $YearShow[0]->year;
         $shindicator_year = DB::table('employee')
             ->join('assign', 'employee.id_employee', '=', 'assign.Employee_id_employee')
             ->join('indicator', 'assign.indicator_id', '=', 'indicator.indicator_id')
@@ -34,7 +39,7 @@ class CreatePart2Controller extends Controller
             ->where('id_department', '!=', 1)
             ->where('id_department', '!=', 2)
             ->get();
-        return view('createPart2', compact('shindicator_year', 'shindicator_month', 'getEmployee', 'year'));
+        return view('createPart2', compact('shindicator_year', 'shindicator_month', 'getEmployee', 'year', 'YearShow'));
     }
     public function insert_indicator(Request $request)
     {

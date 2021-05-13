@@ -59,7 +59,7 @@ th.break {
             <div class="col-12 grid-margin stretch-card">
                 <div class="card">
                     <div class="card-body">
-                        <h3 class="newFont">สร้างตัวชี้วัด </h3>
+                        <h3 class="newFont">สร้างตัวชี้วัดประจำปีงบประมาณ {{$YearShow}} </h3>
                         <br>
                         <hr>
                         <br>
@@ -127,7 +127,7 @@ th.break {
             <div class="col-12 grid-margin stretch-card">
                 <div class="card">
                     <div class="card-body">
-                        <h3 class="newFont">ตัวชี้วัดปีงบประมาณปัจจุบัน</h3>
+                        <h3 class="newFont">ตัวชี้วัดปีปัจจุบัน </h3>
                         <br>
                         <hr>
                         <br>
