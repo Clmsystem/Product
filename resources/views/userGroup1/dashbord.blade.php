@@ -51,7 +51,7 @@
     <div class="content-wrapper">
       <div class="page-header">
         <h3 class="newFont"> กราฟตัวชี้วัด</h3>
-        <button class="btn btn-gradient-info btn-md m-3 mdi mdi-arrow-left newFont" onclick="goBack()" >ย้อนกลับ</button>
+        <button class="btn btn-gradient-info btn-md m-3 mdi mdi-arrow-left newFont" onclick="goBack()">ย้อนกลับ</button>
       </div>
       @foreach($dataKR as $i => $data)
       @if($data->percent==null)
@@ -103,7 +103,7 @@
     var optionsMonth = {
       series: [{
         name: 'ร้อยละ',
-        data: [str1, str2, str3, str4, str5, str6, str7, str8, str9, str10, str11, str12]
+        data: [str10, str11, str12str1, str2, str3, str4, str5, str6, str7, str8, str9, ]
       }, ],
       chart: {
         type: 'bar',
@@ -209,10 +209,10 @@
   var str10 = document.getElementById("10").value;
   var str11 = document.getElementById("11").value;
   var str12 = document.getElementById("12").value;
-  var q1 = (parseInt(str1) + parseInt(str2) + parseInt(str3)) / 3;
-  var q2 = (parseInt(str4) + parseInt(str5) + parseInt(str6)) / 3;
-  var q3 = (parseInt(str7) + parseInt(str8) + parseInt(str9)) / 3;
-  var q4 = (parseInt(str10) + parseInt(str11) + parseInt(str12)) / 3;
+  var q1 = (parseInt(str10) + parseInt(str11) + parseInt(str12)) / 3;
+  var q2 = (parseInt(str1) + parseInt(str2) + parseInt(str3)) / 3;
+  var q3 = (parseInt(str4) + parseInt(str5) + parseInt(str6)) / 3;
+  var q4 = (parseInt(str7) + parseInt(str8) + parseInt(str9)) / 3;
   var optionsQuarter = {
     series: [{
       name: 'ร้อยละ',
