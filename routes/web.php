@@ -167,45 +167,6 @@ try {
     /********************************************* END GROUP 3 ***********************************************/
     /********************************************* END GROUP 3 ***********************************************/
 
-
-    /********************************************* GROUP 1 ***********************************************/
-    /********************************************* GROUP 1 ***********************************************/
-    /********************************************* GROUP 1 ***********************************************/
-    Route::get('/section_one', [ObjectGroup1::class, 'index']);
-    Route::get('/section_one/{year}', [ObjectGroup1::class, 'year']);
-    Route::get('/section_one/{year}/{id}', [Kr::class, 'index']);
-    Route::get('/section_five', [Showobject::class, 'show']);
-    Route::post('/section_one/addKR', [Kr::class, 'addKR'])->name('addKR');
-    Route::post('/section_one/add', [ObjectGroup1::class, 'addObject'])->name('addobject');
-    Route::post('/section_one/updateKR', [Kr::class, 'updateKR'])->name('updateKR');
-    Route::post('/section_one/delete', [ObjectGroup1::class, 'deleteObject'])->name('deleteobject');
-    Route::post('/section_one/edit', [ObjectGroup1::class, 'editObject'])->name('editobject');
-    // ยกเลิกสิทธิ
-    Route::get('/cancelautrority/{id}/{employee}', [Kr::class, 'cancelautrority']);
-    // กำหนดสิทธิ
-    Route::get('/giveautrority/{id}/{employee}', [Kr::class, 'giveautrority']);
-    Route::post('/section_one/deletekr', [Kr::class, 'deletekr'])->name('deletekr');
-    Route::get('/userObject/{id}', [UserOKR::class, 'index']);
-    Route::get('/userKr/{id}/{mount}', [UserOKR::class, 'userKR']);
-    Route::post('/userKr/updateKr', [UserOKR::class, 'updateKRdetail'])->name('updateKRdetail');
-    Route::post('/userKrdetail', [UserOKR::class, 'userKRdetail'])->name('userKRdetail');
-    Route::get('/userKrdetail',  [UserOKR::class, 'usermount']);
-    Route::get('douwloadgone', [UserOKR::class, 'downloadGroubOne']);
-
-    Route::get('/search',  [UserOKR::class, 'search']);
-    Route::post('/searchYear',  [UserOKR::class, 'searchyear']);
-    Route::get('/searchKR/{id}',  [UserOKR::class, 'searchKR']);
-    Route::post('/searchKrdetail', [UserOKR::class, 'searchKrdetail'])->name('searchKRdetail');
-    Route::get('/{id}',  [UserOKR::class, 'dashbord']);
-    Route::post('/showlog', [Showobject::class, 'showlog']);
-    Route::post('/logKR', [Kr::class, 'logKRdetail']);
-    Route::post('/UNlogKR', [Kr::class, 'UNlogKRdetail']);
-    /********************************************* END GROUP 1 ********************************/
-    /********************************************* END GROUP 1 ********************************/
-    /********************************************* END GROUP 1 ********************************/
-
-
-    /********************************************* GROUP 4 ***********************************************/
     /********************************************* GROUP 4 ***********************************************/
     /********************************************* GROUP 4 ***********************************************/
     Route::get('/sec3savedata', [Sec3SaveData::class, 'index'])->name('sec3savedata');
@@ -255,6 +216,46 @@ try {
     /********************************************* END GROUP 4 ********************************/
     /********************************************* END GROUP 4 ********************************/
     /********************************************* END GROUP 4 ********************************/
+
+
+    /********************************************* GROUP 1 ***********************************************/
+    /********************************************* GROUP 1 ***********************************************/
+    /********************************************* GROUP 1 ***********************************************/
+    Route::get('/section_one', [ObjectGroup1::class, 'index']);
+    Route::get('/section_one/{year}', [ObjectGroup1::class, 'year']);
+    Route::get('/section_one/{year}/{id}', [Kr::class, 'index']);
+    Route::get('/section_five', [Showobject::class, 'show']);
+    Route::post('/section_one/addKR', [Kr::class, 'addKR'])->name('addKR');
+    Route::post('/section_one/add', [ObjectGroup1::class, 'addObject'])->name('addobject');
+    Route::post('/section_one/updateKR', [Kr::class, 'updateKR'])->name('updateKR');
+    Route::post('/section_one/delete', [ObjectGroup1::class, 'deleteObject'])->name('deleteobject');
+    Route::post('/section_one/edit', [ObjectGroup1::class, 'editObject'])->name('editobject');
+    // ยกเลิกสิทธิ
+    Route::get('/cancelautrority/{id}/{employee}', [Kr::class, 'cancelautrority']);
+    // กำหนดสิทธิ
+    Route::get('/giveautrority/{id}/{employee}', [Kr::class, 'giveautrority']);
+    Route::post('/section_one/deletekr', [Kr::class, 'deletekr'])->name('deletekr');
+    Route::get('/userObject/{id}', [UserOKR::class, 'index']);
+    Route::get('/userKr/{id}/{mount}', [UserOKR::class, 'userKR']);
+    Route::post('/userKr/updateKr', [UserOKR::class, 'updateKRdetail'])->name('updateKRdetail');
+    Route::post('/userKrdetail', [UserOKR::class, 'userKRdetail'])->name('userKRdetail');
+    Route::get('/userKrdetail',  [UserOKR::class, 'usermount']);
+    Route::get('douwloadgone', [UserOKR::class, 'downloadGroubOne']);
+
+    Route::get('/search',  [UserOKR::class, 'search']);
+    Route::post('/searchYear',  [UserOKR::class, 'searchyear']);
+    Route::get('/searchKR/{id}',  [UserOKR::class, 'searchKR']);
+    Route::post('/searchKrdetail', [UserOKR::class, 'searchKrdetail'])->name('searchKRdetail');
+    Route::get('/{id}',  [UserOKR::class, 'dashbord']);
+    Route::post('/showlog', [Showobject::class, 'showlog']);
+    Route::post('/logKR', [Kr::class, 'logKRdetail']);
+    Route::post('/UNlogKR', [Kr::class, 'UNlogKRdetail']);
+    /********************************************* END GROUP 1 ********************************/
+    /********************************************* END GROUP 1 ********************************/
+    /********************************************* END GROUP 1 ********************************/
+
+
+    /********************************************* GROUP 4 ***********************************************/
 }
 //catch exception
 catch (Exception $e) {

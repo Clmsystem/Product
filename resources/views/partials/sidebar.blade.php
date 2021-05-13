@@ -14,10 +14,8 @@ $role = session()->get('user')['status'];
                         <!--change to offline or busy as needed-->
                     </div>
                     <div class="nav-profile-text d-flex flex-column">
-                        <span class="font-weight-bold mb-2"
-                            style="text-align: center;">{{session()->get('user')['name_employee']}}</span>
-                        <span class="text-secondary text-small"
-                            style="word-wrap: break-word; white-space: normal; text-align: center; margin-left:1px;">{{session()->get('user')['name_position']}}</span>
+                        <span class="font-weight-bold mb-2" style="text-align: center;">{{session()->get('user')['name_employee']}}</span>
+                        <span class="text-secondary text-small" style="word-wrap: break-word; white-space: normal; text-align: center; margin-left:1px;">{{session()->get('user')['name_position']}}</span>
                     </div>
                     {{-- <i class="mdi mdi-bookmark-check text-success nav-profile-badge"></i> --}}
                 </a>
@@ -52,73 +50,73 @@ $role = session()->get('user')['status'];
                 </a>
             </li>
             <?php if ($dp == 2 && $p == 3) : ?>
-            <li class="nav-item">
-                <a class="nav-link" href="/createpart4">
-                    <span class="menu-title">จัดการตัวชี้วัด</span>
-                    <!-- d2 p3 -->
-                    <i class="mdi mdi-contacts menu-icon"></i>
-                </a>
-            </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="/createpart4">
+                        <span class="menu-title">จัดการตัวชี้วัด</span>
+                        <!-- d2 p3 -->
+                        <i class="mdi mdi-contacts menu-icon"></i>
+                    </a>
+                </li>
             <?php endif ?>
             <?php if ($dp == 2 && ($p != 1 && $p != 2)) : ?>
-            <li class="nav-item">
-                <a class="nav-link" href="/submit">
-                    <span class="menu-title">บันทึกผลตามตัวชี้วัด</span>
-                    <!-- d2 p!1 !2 -->
-                    <i class="mdi mdi-contacts menu-icon"></i>
-                </a>
-            </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="/submit">
+                        <span class="menu-title">บันทึกผลตามตัวชี้วัด</span>
+                        <!-- d2 p!1 !2 -->
+                        <i class="mdi mdi-contacts menu-icon"></i>
+                    </a>
+                </li>
             <?php endif ?>
             <?php if ($dp == 1 || $dp == 2) : ?>
-            <li class="nav-item">
-                <a class="nav-link" href="/report">
-                    <span class="menu-title">การสืบค้นและออกรายงาน</span>
-                    <i class="mdi mdi-contacts menu-icon"></i>
-                </a>
-            </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="/report">
+                        <span class="menu-title">การสืบค้นและออกรายงาน</span>
+                        <i class="mdi mdi-contacts menu-icon"></i>
+                    </a>
+                </li>
             <?php endif ?>
             <?php if ($dp == 2 && $p == 3) : ?>
-            <li class="nav-item">
-                <a class="nav-link" href="/approve">
-                    <span class="menu-title">Admin Confirm</span>
-                    <!-- d2 p3 -->
-                    <i class="mdi mdi-contacts menu-icon"></i>
-                </a>
-            </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="/approve">
+                        <span class="menu-title">Admin Confirm</span>
+                        <!-- d2 p3 -->
+                        <i class="mdi mdi-contacts menu-icon"></i>
+                    </a>
+                </li>
             <?php endif ?>
             <?php if ($dp == 4 && $role == 2) : ?>
-            <li class="nav-item">
-                <a class="nav-link" href="/createPart2">
-                    <span class="menu-title">ส่วนที่ 2 เพิ่มตัวชี้วัด</span>
-                    <!-- d2 s2 -->
-                    <i class="mdi mdi-contacts menu-icon"></i>
-                </a>
-            </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="/createPart2">
+                        <span class="menu-title">ส่วนที่ 2 เพิ่มตัวชี้วัด</span>
+                        <!-- d2 s2 -->
+                        <i class="mdi mdi-contacts menu-icon"></i>
+                    </a>
+                </li>
             <?php endif ?>
             <?php if ($role == 3) : ?>
-            <li class="nav-item">
-                <a class="nav-link" href="/management">
-                    <span class="menu-title">การจัดการภาพรวม</span>
-                    <!-- d2 s2 -->
-                    <i class="mdi mdi-contacts menu-icon"></i>
-                </a>
-            </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="/management">
+                        <span class="menu-title">การจัดการภาพรวม</span>
+                        <!-- d2 s2 -->
+                        <i class="mdi mdi-contacts menu-icon"></i>
+                    </a>
+                </li>
             <?php endif ?>
             <?php if ($role == 1 || $role == 2) : ?>
-            <li class="nav-item">
-                <a class="nav-link" href="/contentPart2">
-                    <span class="menu-title">ส่วนที่ 2 ตัวชี้วัด(รายเดือน)</span>
-                    <i class="mdi mdi-contacts menu-icon"></i>
-                </a>
-            </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="/contentPart2">
+                        <span class="menu-title">ส่วนที่ 2 ตัวชี้วัด(รายเดือน)</span>
+                        <i class="mdi mdi-contacts menu-icon"></i>
+                    </a>
+                </li>
             <?php endif ?>
             <?php if ($role == 1 || $role == 2) : ?>
-            <li class="nav-item">
-                <a class="nav-link" href="/contentPart2Year">
-                    <span class="menu-title">ส่วนที่ 2 ตัวชี้วัด(รายปี)</span>
-                    <i class="mdi mdi-contacts menu-icon"></i>
-                </a>
-            </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="/contentPart2Year">
+                        <span class="menu-title">ส่วนที่ 2 ตัวชี้วัด(รายปี)</span>
+                        <i class="mdi mdi-contacts menu-icon"></i>
+                    </a>
+                </li>
             <?php endif ?>
             <li class="nav-item">
                 <a class="nav-link" href="/searchPart2">
@@ -127,38 +125,111 @@ $role = session()->get('user')['status'];
                 </a>
             </li>
             <?php if ($dp == 4 && $role == 2) : ?>
-            <li class="nav-item">
-                <a class="nav-link" href="/confirmPart2">
-                    <span class="menu-title">ยืนยันข้อมูลตัวชี้วัด(รายเดือน)</span>
-                    <!-- s2  d4 -->
-                    <i class="mdi mdi-contacts menu-icon"></i>
-                </a>
-            </li>
-            <li class="nav-item">
-                <a class="nav-link" href="/confirmPart2Year">
-                    <span class="menu-title">ยืนยันข้อมูลตัวชี้วัด(รายปี)</span>
-                    <!-- s2  d4 -->
-                    <i class="mdi mdi-contacts menu-icon"></i>
-                </a>
-            </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="/confirmPart2">
+                        <span class="menu-title">ยืนยันข้อมูลตัวชี้วัด(รายเดือน)</span>
+                        <!-- s2  d4 -->
+                        <i class="mdi mdi-contacts menu-icon"></i>
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="/confirmPart2Year">
+                        <span class="menu-title">ยืนยันข้อมูลตัวชี้วัด(รายปี)</span>
+                        <!-- s2  d4 -->
+                        <i class="mdi mdi-contacts menu-icon"></i>
+                    </a>
+                </li>
             <?php endif ?>
+
+            <?php if ($dp == 4 && $role == 2) : ?>
+                <li class="nav-item">
+                    <a class="nav-link" href="/sec3addind">
+                        <span class="menu-title">ส่วนที่ 3 เพิ่มตัวชี้วัด</span>
+                        <!-- d2 s2 -->
+                        <i class="mdi mdi-contacts menu-icon"></i>
+                    </a>
+                </li>
+            <?php endif ?>
+
+            <?php if ($role == 1 || $role == 2) : ?>
+                <li class="nav-item">
+                    <a class="nav-link" href="/sec3savedata">
+                        <span class="menu-title">ส่วนที่ 3 กรอกข้อมูลตัวชี้วัด</span>
+                        <i class="mdi mdi-contacts menu-icon"></i>
+                    </a>
+                </li>
+            <?php endif ?>
+
+            <li class="nav-item">
+                <a class="nav-link" href="/sec3search">
+                    <span class="menu-title">ส่วน 3 ค้นหาข้อมูลย้อนหลัง</span>
+                    <i class="mdi mdi-contacts menu-icon"></i>
+                </a>
+            </li>
+
+            <?php if ($dp == 4 && $role == 2) : ?>
+                <li class="nav-item">
+                    <a class="nav-link" href="/sec3confirm">
+                        <span class="menu-title">ส่วนที่ 3 ยืนยันตัวชี้วัด</span>
+                        <!-- d2 s2 -->
+                        <i class="mdi mdi-contacts menu-icon"></i>
+                    </a>
+                </li>
+            <?php endif ?>
+
+            <?php if ($dp == 4 && $role == 2) : ?>
+                <li class="nav-item">
+                    <a class="nav-link" href="/sec4addind">
+                        <span class="menu-title">ส่วนที่ 4 เพิ่มตัวชี้วัด</span>
+                        <!-- d2 s2 -->
+                        <i class="mdi mdi-contacts menu-icon"></i>
+                    </a>
+                </li>
+            <?php endif ?>
+
+            <?php if ($role == 1 || $role == 2) : ?>
+                <li class="nav-item">
+                    <a class="nav-link" href="/sec4savedata">
+                        <span class="menu-title">ส่วนที่ 4 กรอกข้อมูลตัวชี้วัด</span>
+                        <i class="mdi mdi-contacts menu-icon"></i>
+                    </a>
+                </li>
+            <?php endif ?>
+
+            <li class="nav-item">
+                <a class="nav-link" href="/sec4search">
+                    <span class="menu-title">ส่วน 4 ค้นหาข้อมูลย้อนหลัง</span>
+                    <i class="mdi mdi-contacts menu-icon"></i>
+                </a>
+            </li>
+
+            <?php if ($dp == 4 && $role == 2) : ?>
+                <li class="nav-item">
+                    <a class="nav-link" href="/sec4confirm">
+                        <span class="menu-title">ส่วนที่ 4 ยืนยันตัวชี้วัด</span>
+                        <!-- d2 s2 -->
+                        <i class="mdi mdi-contacts menu-icon"></i>
+                    </a>
+                </li>
+            <?php endif ?>
+
         </ul>
     </nav>
     <!-- partial -->
 
     <style>
-    .sizeimg {
-        /* width: 70px;
+        .sizeimg {
+            /* width: 70px;
       height: 70px; */
-        border-radius: 100%;
-        object-fit: cover;
-        margin-top: -13px;
-        margin-left: -20px
-    }
+            border-radius: 100%;
+            object-fit: cover;
+            margin-top: -13px;
+            margin-left: -20px
+        }
 
-    .sidebar .nav .nav-item.nav-profile .nav-link .nav-profile-image img {
-        width: 70px;
-        height: 70px;
-        border-radius: 100%;
-    }
+        .sidebar .nav .nav-item.nav-profile .nav-link .nav-profile-image img {
+            width: 70px;
+            height: 70px;
+            border-radius: 100%;
+        }
     </style>
