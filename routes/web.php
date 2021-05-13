@@ -38,6 +38,20 @@ use App\Http\Controllers\GraphPart2YearController;
 
 /************************************************  END GROUP 3**********************************************************/
 
+/************************************************ GROUP 4**********************************************************/
+
+use App\Http\Controllers\Sec3AddInd;
+use App\Http\Controllers\Sec3Confirm;
+use App\Http\Controllers\Sec3SaveData;
+use App\Http\Controllers\Sec3Search;
+use App\Http\Controllers\Sec3Dashboard;
+use App\Http\Controllers\Sec4AddInd;
+use App\Http\Controllers\Sec4Confirm;
+use App\Http\Controllers\Sec4SaveData;
+use App\Http\Controllers\Sec4Search;
+use App\Http\Controllers\Sec4Dashboard;
+
+/************************************************  END GROUP 4**********************************************************/
 
 // |--------------------------------------------------------------------------
 // | Web Routes
