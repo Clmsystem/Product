@@ -47,7 +47,10 @@ td.break {
     <div class="main-panel">
         <div class="content-wrapper">
             <div class="page-header">
-                <h3 class="newFont"> กราฟตัวชี้วัด <?= $name ?> ปีงบประมาณ <?= $year ?> </h3>
+                <h3 class="newFont"><i class="mdi mdi-arrow-right-drop-circle-outline"></i> กราฟตัวชี้วัด <?= $name ?>
+                    ปีงบประมาณ
+                    <?= $year ?> </h3>
+
 
             </div>
 
@@ -60,7 +63,7 @@ td.break {
         </div>
         @include('partials.footer')
     </div>
-  
+
 </body>
 <!-- chart-year -->
 <script>
