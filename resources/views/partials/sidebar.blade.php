@@ -89,7 +89,7 @@ $role = session()->get('user')['status'];
             <?php if ($dp == 4 && $role == 2) : ?>
             <li class="nav-item">
                 <a class="nav-link" href="/createPart2">
-                    <span class="menu-title">เพิ่มตัวชี้วัด</span>
+                    <span class="menu-title">ส่วนที่ 2 เพิ่มตัวชี้วัด</span>
                     <!-- d2 s2 -->
                     <i class="mdi mdi-contacts menu-icon"></i>
                 </a>
