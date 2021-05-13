@@ -56,7 +56,8 @@ th.break {
     <div class="main-panel">
         <div class="content-wrapper">
             <div class="page-header">
-                <h3 class="newFont"> ส่วนที่ 2 ตัวชี้วัดตามเกณฑ์การประเมินหน่วยงาน (9 ข้อ) จาก ทมอ. </h3>
+                <h3 class="newFont"><i class="mdi mdi-arrow-right-drop-circle-outline"></i> ส่วนที่ 2
+                    ตัวชี้วัดตามเกณฑ์การประเมินหน่วยงาน (9 ข้อ) จาก ทมอ. </h3>
             </div>
 
             <!-- ------------------------------------------  ค้นหาตัวชี้วัด Start-  --------------------------------------------->
@@ -106,7 +107,8 @@ th.break {
                                 <div class="form-group col-md-12">
                                     <div class="button-position">
                                         <button type="submit" name="search" value="search"
-                                            class="btn btn-gradient-primary mr-2 newFont">ค้นหา</button>
+                                            class="btn btn-gradient-primary mr-2 newFont"><i
+                                                class="mdi mdi-magnify"></i> ค้นหา</button>
                                     </div>
                                 </div>
 
@@ -130,7 +132,8 @@ th.break {
 
                             <div class="button-position">
                                 <button type="submit" name="download" value="download"
-                                    class="btn btn-gradient-info mr-2 newFont">ดาวน์โหลด .csv</button>
+                                    class="btn btn-gradient-info mr-2 newFont"><i class="mdi mdi-cloud-download"></i>
+                                    ดาวน์โหลด .csv</button>
 
 
                             </div>
@@ -195,7 +198,8 @@ th.break {
 
                             <div class="button-position">
                                 <button type="submit" name="download2" value="download2"
-                                    class="btn btn-gradient-info mr-2 newFont">ดาวน์โหลด .csv</button>
+                                    class="btn btn-gradient-info mr-2 newFont"><i class="mdi mdi-cloud-download"></i>
+                                    ดาวน์โหลด .csv</button>
                             </div>
                             <br>
                             <br>

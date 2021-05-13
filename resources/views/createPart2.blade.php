@@ -53,7 +53,8 @@ th.break {
     <div class="main-panel">
         <div class="content-wrapper">
             <div class="page-header">
-                <h3 class="newFont"> ส่วนที่ 2 ตัวชี้วัดตามเกณฑ์การประเมินหน่วยงาน (9 ข้อ) จาก ทมอ. </h3>
+                <h3 class="newFont"><i class="mdi mdi-arrow-right-drop-circle-outline"></i> ส่วนที่ 2
+                    ตัวชี้วัดตามเกณฑ์การประเมินหน่วยงาน (9 ข้อ) จาก ทมอ. </h3>
             </div>
             <!-- ------------------------------------------  สร้างตัวชี้วัด Start-  --------------------------------------------->
             <div class="col-12 grid-margin stretch-card">
@@ -113,8 +114,8 @@ th.break {
                                 <div class="form-group col-md-9"></div>
                                 <div class="form-group col-md-3">
                                     <div class="button-position">
-                                        <button type="submit"
-                                            class="btn btn-gradient-primary mr-2 newFont">เพิ่มตัวชี้วัด</button>
+                                        <button type="submit" class="btn btn-gradient-primary mr-2 newFont"><i
+                                                class="mdi mdi-grease-pencil"></i> เพิ่มตัวชี้วัด</button>
                                     </div>
                                 </div>
                             </div>

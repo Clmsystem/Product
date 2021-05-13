@@ -56,7 +56,8 @@ th.break {
     <div class="main-panel">
         <div class="content-wrapper">
             <div class="page-header">
-                <h3 class="newFont"> ส่วนที่ 2 ตัวชี้วัดตามเกณฑ์การประเมินหน่วยงาน (9 ข้อ) จาก ทมอ. </h3>
+                <h3 class="newFont"><i class="mdi mdi-arrow-right-drop-circle-outline"></i> ส่วนที่ 2
+                    ตัวชี้วัดตามเกณฑ์การประเมินหน่วยงาน (9 ข้อ) จาก ทมอ. </h3>
             </div>
 
             <!-- ------------------------------------------  ค้นหาตัวชี้วัด Start-  --------------------------------------------->
@@ -65,6 +66,7 @@ th.break {
                     <div class="card-body">
                         <h3 class="newFont">ยืนยันข้อมูล (ตัวชี้วัดรายปี) ประจำปีงบประมาณ
                             <?php echo $YearShow; ?></h3>
+
                         <hr>
                         <!-- <hr> -->
 
@@ -119,7 +121,8 @@ th.break {
                                 <div class="button-position">
                                     <input type="hidden" value="{{$year}}" name="yearselect" id="yearselect">
                                     <button type="submit" data-toggle="modal"
-                                        class="btn btn-gradient-danger mr-4 newFont">ยกเลิก</button>
+                                        class="btn btn-gradient-danger mr-4 newFont"><i
+                                            class="mdi mdi-lock-open-outline"></i> ยกเลิก</button>
                                 </div>
                             </form>
                             <form action="{{route('logPart2Year')}}" method="POST" enctype="multipart/form-data">
@@ -127,7 +130,8 @@ th.break {
                                 <div class="button-position">
                                     <input type="hidden" value="{{$year}}" name="yearselect" id="yearselect">
                                     <button type="submit" data-toggle="modal"
-                                        class="btn btn-gradient-primary mr-4 newFont">ยืนยันข้อมูล</button>
+                                        class="btn btn-gradient-primary mr-4 newFont"><i
+                                            class="mdi mdi-lock-outline"></i> ยืนยันข้อมูล</button>
                                 </div>
                             </form>
                         </div>
