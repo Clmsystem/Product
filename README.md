@@ -5,7 +5,7 @@
 
 ### Software Engineering 7th Generation 
 
--   Walailak University
+-   Walailak University 2021 
 
 ### ขั้นตอนการใช้
 
